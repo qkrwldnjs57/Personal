@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div class="alert-box" id="alert">
+            <p id="title">알림창임</p>
+            <button id="close">닫기</button>
+        </div>
+
+        <button onclick="shortCut('아이디를 입력해주세요','block')">버튼1</button>
+        <button onclick="shortCut('비밀번호를 입력해주세요','block')">버튼2</button>
+
+        <script>
+
+            document.getElementById('close').addEventListener('mouseover', function(){
+                document.getElementById('alert').style.display ='none';
+            });
+
+            function 알림창열기(구멍){
+                document.getElementById('alert').style.display = 구멍;
+            }
+
+            function shortCut(msg, command){
+                document.getElementById('title').innerHTML=msg;
+                document.getElementById('alert').style.display = command;
+            }
+        </script>
+
+    </body>
+</html>
